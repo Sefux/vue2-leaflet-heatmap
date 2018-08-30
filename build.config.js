@@ -1,11 +1,11 @@
-var nodeExternals = require('webpack-node-externals');
+var nodeExternals = require("webpack-node-externals");
 
 module.exports = {
   webpack: {
     externals: [
       nodeExternals(),
-      {'leaflet': 'L'},
-      {'leaflet.hotline': {root: ['L', 'hotline']}}
+      { leaflet: "L" },
+      { "leaflet.heatmap": { root: ["L", "heatmap"] } }
     ]
   }
-}
+};

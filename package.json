@@ -1,9 +1,9 @@
 {
   "author": {
-    "name": "Ilya Oblomov"
+    "name": "Jurian Baas"
   },
   "bugs": {
-    "url": "https://github.com/ikmolbo/vue2-leaflet-hotline/issues"
+    "url": "https://github.com/jurb/vue2-leaflet-heatmap/issues"
   },
   "bundleDependencies": false,
   "dependencies": {
@@ -12,30 +12,28 @@
     "vue2-leaflet": "^1.0.2"
   },
   "deprecated": false,
-  "description": "Create coloured gradients along polylines using Vue and Leaflet.",
+  "description": "Create heatmaps using Vue and Leaflet.",
   "devDependencies": {
     "babel-preset-env": "^1.6.0",
     "eslint-plugin-html": "^4.0.3",
     "vue-cli": "~2.8.2",
     "webpack-node-externals": "^1.5.4"
   },
-  "homepage": "https://github.com/ikmolbo/vue2-leaflet-hotline#readme",
+  "homepage": "https://github.com/jurb/vue2-leaflet-heatmap#readme",
   "keywords": [
     "Vue",
     "Leaflet",
-    "gradient",
-    "hotline",
-    "polyline"
+    "heatmap"
   ],
   "license": "MIT",
-  "main": "dist/Vue2LeafletHotline.js",
-  "name": "vue2-leaflet-hotline",
+  "main": "dist/Vue2LeafletHeatmap.js",
+  "name": "vue2-leaflet-heatmap",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ikmolbo/vue2-leaflet-hotline.git"
+    "url": "git+ssh://git@github.com:jurb/vue2-leaflet-heatmap.git"
   },
   "scripts": {
-    "build": "vue build Vue2LeafletHotline.vue --prod --lib --config build.config.js",
+    "build": "vue build Vue2LeafletHeatmap.vue --prod --lib --config build.config.js",
     "example": "vue build example.vue",
     "example-geojson": "vue build example-geojson.vue"
   },
