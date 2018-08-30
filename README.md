@@ -68,7 +68,7 @@ You can use the following props to style the hotline:
 
 ## Acknowledgements
 
-This is just a wrapper, all credit to the people who made [Leaflet](https://github.com/Leaflet) and [Leaflet.heat](https://github.com/Leaflet/Leaflet.heat), to Korigan, who made [Vue2Leaflet](https://github.com/KoRiGaN/Vue2Leaflet), and to jperelli for the [Vue2Leaflet markercluster plugin example](https://github.com/jperelli/vue2-leaflet-markercluster).
+This is just a wrapper, all credit to the people who made [Leaflet](https://github.com/Leaflet) and [Leaflet.heat](https://github.com/Leaflet/Leaflet.heat), to Korigan, who made [Vue2Leaflet](https://github.com/KoRiGaN/Vue2Leaflet), and to @jperelli and @ikmolbo for creating the [Vue2Leaflet markercluster](https://github.com/jperelli/vue2-leaflet-markercluster) and [Vue2Leaflet hotline](https://github.com/ikmolbo/vue2-leaflet-hotline) plugins.
 
 ## License
 
