@@ -4,7 +4,7 @@ This is a [heatmap](https://github.com/Leaflet/Leaflet.heat) extension for [vue2
 
 ## Install
 
-**I can't seem to get this working as an NPM package yet. See [the first issue](https://github.com/jurb/vue2-leaflet-heatmap/issues/1) For now, copy `LeafletHeatmap.vue` to your components and import the component with `import LeafletHeatmap from "./LeafletHeatmap";`, register the component and use it as a `<LeafletHeatmap>` element in you template.**
+**I can't seem to get this working as an NPM package yet. See [the first issue](https://github.com/jurb/vue2-leaflet-heatmap/issues/1). For now, copy `LeafletHeatmap.vue` to your components and import the component with `import LeafletHeatmap from "./LeafletHeatmap";`, register the component and use it as a `<LeafletHeatmap>` element in you template.**
 
 Soon I hope you can do:
 
