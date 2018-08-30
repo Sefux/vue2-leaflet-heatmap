@@ -1,4 +1,4 @@
-# vue2-leaflet-hotline
+# vue2-leaflet-heatmap
 
 This is a [heatmap](https://github.com/Leaflet/Leaflet.heat) extension for [vue2-leaflet package](https://github.com/KoRiGaN/Vue2Leaflet).
 
