@@ -5,7 +5,7 @@ module.exports = {
     externals: [
       nodeExternals(),
       { leaflet: "L" },
-      { "leaflet.heatmap": { root: ["L", "heatmap"] } }
+      { "leaflet.heatmap": { root: ["leaflet", "heatmap"] } }
     ]
   }
 };
