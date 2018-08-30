@@ -25,7 +25,7 @@
     "heatmap"
   ],
   "license": "MIT",
-  "main": "Vue2LeafletHeatmap.vue",
+  "main": "dist/Vue2LeafletHeatmap.js",
   "name": "vue2-leaflet-heatmap",
   "repository": {
     "type": "git",

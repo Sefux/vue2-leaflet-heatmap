@@ -1,10 +1,14 @@
 # vue2-leaflet-hotline
 
-This is a [hotline plugin](https://github.com/iosphere/Leaflet.hotline) extension for [vue2-leaflet package](https://github.com/KoRiGaN/Vue2Leaflet)
+This is a [heatmap](https://github.com/Leaflet/Leaflet.heat) extension for [vue2-leaflet package](https://github.com/KoRiGaN/Vue2Leaflet).
 
 ## Install
 
-    npm install --save vue2-leaflet-hotline
+**I can't seem to get this working as an NPM package yet. See [the first issue](https://github.com/jurb/vue2-leaflet-heatmap/issues/1) For now, copy `LeafletHeatmap.vue` to your components and import the component with `import LeafletHeatmap from "./LeafletHeatmap";`, register the component and use it as a `<LeafletHeatmap>` element in you template.**
+
+Soon I hope you can do:
+
+    npm install --save git+ssh://git@github.com:jurb/vue2-leaflet-heatmap.git
 
 ## Usage
 
@@ -12,10 +16,10 @@ This is a [hotline plugin](https://github.com/iosphere/Leaflet.hotline) extensio
 
 something like this
 
-    <v-map :zoom=10 :center="initialLocation">
-      <v-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></v-tilelayer>
-      <v-hotline :latlngs="latLngArray" :min="minValue" :max="maxValue"></v-hotline>
-    </v-map>
+    <l-map :zoom=10 :center="initialLocation">
+      <l-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></v-tilelayer>
+      <LeafletHeatmap :latlngs="latLngArray" :max="maxValue" :radius="15"></LeafletHeatmap>
+    </l-map>
 
 ### In &lt;script&gt; add
 
@@ -23,12 +27,12 @@ something like this
 
 In the same template file, at `<script>` part, this will make the component available only to the template in this file
 
-    import Vue2LeafletHotline from 'vue2-leaflet-hotline'
+    import LeafletHeatmap from './LeafletHeatmap'
     ...
     export default {
       ...
       components: {
-        'v-hotline': Vue2LeafletHotline
+        LeafletHeatmap
         ...
       },
       ...
@@ -39,32 +43,32 @@ In the same template file, at `<script>` part, this will make the component avai
 At main Vue configuration, this will make the component available to all templates in your app
 
     import Vue from 'vue'
-    import Vue2LeafletHotline from 'vue2-leaflet-hotline'
+    import LeafletHeatmap from './LeafletHeatmap'
     ...
-    Vue.component('v-leaflet-hotline', Vue2LeafletHotline)
+    Vue.component('LeafletHeatmap', LeafletHeatmap)
 
 ### `latlngs` prop
 
-The `latlngs` prop needs to be an array of `LatLng` points (a polyline) with an additional third element (z value) in each point; this determines which color from the `palette` to use.
+The `latlngs` prop needs to be an array of `LatLng` points (a polyline) with an additional third element (intensity) in each point.
 
 ### Other props
 
 You can use the following props to style the hotline:
 
-- **weight** - Same as usual. `5` per default.
-- **outline-width** - The width of the outline along the stroke in pixels. Can be `0`. `1` per default.
-- **outline-color** - The color of the outline. `'black'` per default.
-- **palette** - The config for the palette gradient in the form of `{ <stop>: '<color>' }`. `{ 0.0: 'green', 0.5: 'yellow', 1.0: 'red' }` per default. Stop values should be between `0` and `1`.
-- **min** - The smallest z value expected in the `latlngs` array. This maps to the `0` stop value. Any z values smaller than this will be considered as `min` when choosing the color to use.
-- **max** - The largest z value expected in the `latlngs` array. This maps to the `1` stop value. Any z values greater than this will be considered as `max` when choosing the color to use.
+- **minOpacity** - the minimum opacity the heat will start at
+- **maxZoom** - zoom level where the points reach maximum intensity (as intensity scales with zoom), equals `maxZoom` of the map by default
+- **max** - maximum point intensity, `1.0` by default
+- **radius** - radius of each "point" of the heatmap, `25` by default
+- **blur** - amount of blur, `15` by default
+- **gradient** - color gradient config, e.g. `{0.4: 'blue', 0.65: 'lime', 1: 'red'}`
 
 ## Author
 
-[Ilya Oblomov](https://www.getairbase.com)
+[Jurian Baas](https://jurb.me)
 
 ## Acknowledgements
 
-Thanks to iosphere GmbH, the authors of the Leaflet.Hotline plugin. This package has been used as the basis to build this plugin.
+This is just a wrapper, all credit to the people who made [Leaflet](https://github.com/Leaflet) and [Leaflet.heat](https://github.com/Leaflet/Leaflet.heat), to Korigan, who made [Vue2Leaflet](https://github.com/KoRiGaN/Vue2Leaflet), and to jperelli for the [Vue2Leaflet markercluster plugin example](https://github.com/jperelli/vue2-leaflet-markercluster).
 
 ## License
 
