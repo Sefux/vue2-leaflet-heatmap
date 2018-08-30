@@ -5,9 +5,9 @@
 </template>
 
 <script>
-const L = require("leaflet");
-const { findRealParent, propsBinder } = require("vue2-leaflet");
-require("leaflet.heat")(L);
+import L from "leaflet";
+import "leaflet.heat";
+import { findRealParent, propsBinder } from "vue2-leaflet";
 
 const props = {
   latLngs: {
