@@ -71,7 +71,7 @@ export default {
     if (this.max) {
       options.max = this.max;
     }
-    this.mapObject = L.heatLayer(this.latLngs, options);
+    this.mapObject = L.heatLayer(this.latLng, options);
     L.DomEvent.on(this.mapObject, this.$listeners);
     propsBinder(this, this.mapObject, props);
     this.ready = true;
