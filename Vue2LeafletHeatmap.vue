@@ -10,7 +10,7 @@ import "leaflet.heat";
 import { findRealParent, propsBinder } from "vue2-leaflet";
 
 const props = {
-  latLngs: {
+  latLng: {
     type: Array,
     default: () => [],
     custom: false
