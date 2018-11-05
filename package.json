@@ -1,23 +1,6 @@
 {
-  "author": {
-    "name": "Jurian Baas"
-  },
-  "bugs": {
-    "url": "https://github.com/jurb/vue2-leaflet-heatmap/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "leaflet": "^1.3.4",
-    "leaflet.heat": "^0.2.0",
-    "vue2-leaflet": "^1.0.2"
-  },
-  "deprecated": false,
+  "name": "vue2-leaflet-heatmap",
   "description": "Create heatmaps using Vue and Leaflet.",
-  "devDependencies": {
-    "babel-preset-env": "^1.6.0",
-    "vue-cli": "~2.8.2",
-    "webpack-node-externals": "^1.7.2"
-  },
   "homepage": "https://github.com/jurb/vue2-leaflet-heatmap#readme",
   "keywords": [
     "Vue",
@@ -25,16 +8,61 @@
     "heatmap"
   ],
   "license": "MIT",
-  "main": "dist/Vue2LeafletHeatmap.js",
-  "name": "vue2-leaflet-heatmap",
+  "author": {
+    "name": "Jurian Baas"
+  },
+  "bugs": {
+    "url": "https://github.com/jurb/vue2-leaflet-heatmap/issues"
+  },
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name Vue2LeafletHeatmap Vue2LeafletHeatmap.vue"
+  },
+  "main": "dist/Vue2LeafletHeatmap.umd.js",
+  "module": "dist/Vue2LeafletHeatmap.common.js",
+  "unpkg": "dist/Vue2LeafletHeatmap.min.js",
+  "files": [
+    "dist/"
+  ],
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:jurb/vue2-leaflet-heatmap.git"
   },
-  "scripts": {
-    "build": "vue build Vue2LeafletHeatmap.vue --prod --lib --config build.config.js",
-    "example": "vue build example.vue",
-    "example-geojson": "vue build example-geojson.vue"
+  "peerDependencies": {
+    "vue": "^2.5.17"
   },
-  "version": "1.0.0"
+  "dependencies": {
+    "leaflet": "^1.3.4",
+    "leaflet.heat": "^0.2.0",
+    "vue2-leaflet": "^1.1.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-eslint": "^3.0.5",
+    "@vue/cli-service": "^3.0.5",
+    "@vue/eslint-config-prettier": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0-0",
+    "lint-staged": "^7.2.2",
+    "vue-template-compiler": "^2.5.17",
+    "webpack-node-externals": "^1.7.2",
+    "yallist": "^3.0.2"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
 }
