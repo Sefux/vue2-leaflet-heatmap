@@ -82,19 +82,19 @@ export default {
     this.parentContainer.removeLayer(this);
   },
   methods: {
-    setMinOpacity(newVal, oldVal) {
+    setMinOpacity(newVal) {
       this.mapObject.setOptions({ minOpacity: newVal });
     },
-    setMaxZoom(newVal, oldVal) {
+    setMaxZoom(newVal) {
       this.mapObject.setOptions({ maxZoom: newVal });
     },
-    setRadius(newVal, oldVal) {
+    setRadius(newVal) {
       this.mapObject.setOptions({ radius: newVal });
     },
-    setBlur(newVal, oldVal) {
+    setBlur(newVal) {
       this.mapObject.setOptions({ blur: newVal });
     },
-    setMax(newVal, oldVal) {
+    setMax(newVal) {
       this.mapObject.setOptions({ max: newVal });
     },
     setVisible(newVal, oldVal) {
