@@ -49,14 +49,14 @@ At main Vue configuration, this will make the component available to all templat
 
 ### `latlngs` prop
 
-The `latlngs` prop needs to be an array of `LatLng` points (a polyline) with an additional third element (intensity) in each point.
+The `lat-lng` prop needs to be an array of `LatLng` points (a polyline) with an additional third element (intensity) in each point.
 
 ### Other props
 
 You can use the following props to style the hotline:
 
-- **minOpacity** - the minimum opacity the heat will start at
-- **maxZoom** - zoom level where the points reach maximum intensity (as intensity scales with zoom), equals `maxZoom` of the map by default
+- **min-opacity** - the minimum opacity the heat will start at
+- **max-zoom** - zoom level where the points reach maximum intensity (as intensity scales with zoom), equals `maxZoom` of the map by default
 - **max** - maximum point intensity, `1.0` by default
 - **radius** - radius of each "point" of the heatmap, `25` by default
 - **blur** - amount of blur, `15` by default
