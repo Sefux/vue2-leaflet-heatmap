@@ -4,12 +4,6 @@ This is a [heatmap](https://github.com/Leaflet/Leaflet.heat) extension for [vue2
 
 ## Install
 
-**I can't seem to get this working as an NPM package yet. See [the first issue](https://github.com/jurb/vue2-leaflet-heatmap/issues/1). For now, copy `LeafletHeatmap.vue` to your components and import the component with `import LeafletHeatmap from "./LeafletHeatmap";`, register the component and use it as a `<LeafletHeatmap>` element in you template.**
-
-Soon I hope you can do:
-
-    npm install --save git+ssh://git@github.com:jurb/vue2-leaflet-heatmap.git
-
 ## Usage
 
 ### In &lt;template&gt; add
@@ -18,7 +12,7 @@ something like this
 
     <l-map :zoom=10 :center="initialLocation">
       <l-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></v-tilelayer>
-      <LeafletHeatmap :latlngs="latLngArray" :max="maxValue" :radius="15"></LeafletHeatmap>
+      <LeafletHeatmap :lat-lng="latLngArray" :max="maxValue" :radius="15"></LeafletHeatmap>
     </l-map>
 
 ### In &lt;script&gt; add
