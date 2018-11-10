@@ -4,6 +4,8 @@ This is a [heatmap](https://github.com/Leaflet/Leaflet.heat) extension for [vue2
 
 ## Install
 
+`npm i vue2-leaflet-heatmap`
+
 ## Usage
 
 ### In &lt;template&gt; add
