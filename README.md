@@ -60,9 +60,11 @@ You can use the following props to style the hotline:
 
 ## Author
 
-[Jurian Baas](https://jurb.me)
+[Jurian Baas](https://jurb.me), [Nicolò Maria Mezzopera](https://github.com/lordfuoco)
 
 ## Acknowledgements
+
+[Nicolò Maria Mezzopera](https://github.com/lordfuoco) was nice enough to turn this into a proper npm module, thanks!
 
 This is just a wrapper, all credit to the people who made [Leaflet](https://github.com/Leaflet) and [Leaflet.heat](https://github.com/Leaflet/Leaflet.heat), to Korigan, who made [Vue2Leaflet](https://github.com/KoRiGaN/Vue2Leaflet), and to @jperelli and @ikmolbo for creating the [Vue2Leaflet markercluster](https://github.com/jperelli/vue2-leaflet-markercluster) and [Vue2Leaflet hotline](https://github.com/ikmolbo/vue2-leaflet-hotline) plugins.
 
