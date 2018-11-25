@@ -14,7 +14,7 @@
   "bugs": {
     "url": "https://github.com/jurb/vue2-leaflet-heatmap/issues"
   },
-  "version": "1.0.3",
+  "version": "1.0.4",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -32,10 +32,10 @@
     "url": "git+ssh://git@github.com:jurb/vue2-leaflet-heatmap.git"
   },
   "peerDependencies": {
-    "vue": "^2.5.17"
+    "vue": "^2.5.17",
+    "leaflet": "^1.3.4"
   },
   "dependencies": {
-    "leaflet": "^1.3.4",
     "leaflet.heat": "^0.2.0",
     "vue2-leaflet": "^1.1.1"
   },
