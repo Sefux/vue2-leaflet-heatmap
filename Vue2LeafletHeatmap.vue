@@ -5,7 +5,8 @@
 </template>
 
 <script>
-import { findRealParent, propsBinder, L } from "vue2-leaflet";
+import { findRealParent, propsBinder } from "vue2-leaflet";
+import { DomEvent } from "leaflet";
 import "leaflet.heat";
 
 const props = {
@@ -71,7 +72,7 @@ export default {
       options.max = this.max;
     }
     this.mapObject = L.heatLayer(this.latLng, options);
-    L.DomEvent.on(this.mapObject, this.$listeners);
+    DomEvent.on(this.mapObject, this.$listeners);
     propsBinder(this, this.mapObject, props);
     this.ready = true;
     this.parentContainer = findRealParent(this.$parent);
