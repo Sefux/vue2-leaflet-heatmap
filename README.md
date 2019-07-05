@@ -13,7 +13,7 @@ This is a [heatmap](https://github.com/Leaflet/Leaflet.heat) extension for [vue2
 something like this
 
     <l-map :zoom=10 :center="initialLocation">
-      <l-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></v-tilelayer>
+      <l-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tilelayer>
       <LeafletHeatmap :lat-lng="latLngArray" :max="maxValue" :radius="15"></LeafletHeatmap>
     </l-map>
 
