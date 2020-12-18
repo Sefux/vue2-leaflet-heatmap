@@ -5,10 +5,14 @@
 </template>
 
 <script>
+
+const L = window.L;
+
 import { findRealParent, propsBinder } from "vue2-leaflet";
 import { DomEvent } from "leaflet";
 import "leaflet.heat";
-
+const L = window.L;
+    
 const props = {
   latLng: {
     type: Array,
