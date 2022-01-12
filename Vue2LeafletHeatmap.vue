@@ -68,7 +68,16 @@ export default {
   data() {
     return {
       ready: false,
+      mapObject: {},
+      options: {},
     };
+  },
+  watch: {
+    latLng(newVal, oldVal) {
+      if (newVal != oldVal) {
+        this.mapObject.setLatLngs(newVal);
+      }
+    },
   },
   mounted() {
     const options = {};
@@ -129,6 +138,12 @@ export default {
     },
     addLatLng(value) {
       this.mapObject.addLatLng(value);
+    },
+    setLatLngs(value) {
+      this.mapObject.setLatLngs(value);
+    },
+    redraw() {
+      this.mapObject.redraw();
     },
   },
 };
