@@ -1,61 +1,60 @@
 <template>
-  <div style="display: none;">
+  <div style="display: none">
     <slot v-if="ready"></slot>
   </div>
 </template>
 
 <script>
-
 const L = window.L;
 
 import { findRealParent, propsBinder } from "vue2-leaflet";
 import { DomEvent } from "leaflet";
 import "leaflet.heat";
 const L = window.L;
-    
+
 const props = {
   latLng: {
     type: Array,
     default: () => [],
-    custom: false
+    custom: false,
   },
   minOpacity: {
     type: Number,
     custom: true,
-    default: 0.05
+    default: 0.05,
   },
   maxZoom: {
     type: Number,
     custom: true,
-    default: 18
+    default: 18,
   },
   radius: {
     type: Number,
     custom: true,
-    default: 25
+    default: 25,
   },
   blur: {
     type: Number,
     custom: true,
-    default: 15
+    default: 15,
   },
   max: {
     type: Number,
     custom: true,
-    default: 1.0
+    default: 1.0,
   },
   visible: {
     type: Boolean,
     custom: true,
-    default: true
-  }
+    default: true,
+  },
 };
 export default {
   name: "LHeatmap",
   props,
   data() {
     return {
-      ready: false
+      ready: false,
     };
   },
   mounted() {
@@ -111,8 +110,8 @@ export default {
     },
     addLatLng(value) {
       this.mapObject.addLatLng(value);
-    }
-  }
+    },
+  },
 };
 </script>
 
